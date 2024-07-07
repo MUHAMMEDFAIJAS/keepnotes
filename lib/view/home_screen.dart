@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final provider = Provider.of<KeepNotesController>(context, listen: false);
+    final provider = Provider.of<notesController>(context, listen: false);
     final uId = FirebaseAuth.instance.currentUser?.uid;
 
     return Scaffold(
@@ -66,13 +66,7 @@ class HomeScreen extends StatelessWidget {
                 child: Text('No notes available.'),
               );
             }
-            return GridView.builder(
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                crossAxisSpacing: 1,
-                mainAxisSpacing: 1,
-                childAspectRatio: 0.95,
-              ),
+            return ListView.builder(
               itemCount: notesData.length,
               itemBuilder: (context, index) {
                 final data = notesData[index].data();
@@ -93,9 +87,7 @@ class HomeScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: const Color.fromARGB(255, 49, 48, 46),
-                        border: Border.all(
-                          color: const Color.fromARGB(255, 104, 102, 102),
-                        ),
+                        border: Border.all(color: Colors.black12),
                       ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,

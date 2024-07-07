@@ -19,14 +19,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MultiProvider(
+    return MultiProvider(
       providers: [
-        
-        ChangeNotifierProvider(create: (context) => KeepNotesController(),
-        
+        ChangeNotifierProvider(
+          create: (context) => notesController(),
         ),
-        
-        
       ],
       child: MaterialApp(
         home: SplashScreen(),

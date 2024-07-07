@@ -8,7 +8,7 @@ class Addnotes extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final provider = Provider.of<KeepNotesController>(context, listen: false);
+    final provider = Provider.of<notesController>(context, listen: false);
     return SafeArea(
       child: PopScope(
         canPop: true,

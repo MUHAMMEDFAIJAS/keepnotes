@@ -4,8 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:keepnotes/model/notes_model.dart';
 import 'package:keepnotes/service/notesservice.dart';
 
-
-class KeepNotesController extends ChangeNotifier {
+class notesController extends ChangeNotifier {
   TextEditingController titleCtrl = TextEditingController();
   TextEditingController descpCtrl = TextEditingController();
   KeepNotesService service = KeepNotesService();

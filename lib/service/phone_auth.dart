@@ -3,7 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 class PhoneOtpAuth {
   static final FirebaseAuth auth = FirebaseAuth.instance;
   static String verifyId = "";
-  // sent otp user
+  
   static Future sentOtp({
     required String phone,
     required Function errorStep,
@@ -36,7 +36,7 @@ class PhoneOtpAuth {
     } catch (e) {}
   }
 
-//veryfy otp and login
+
   static Future loginWithOtp({required String otp}) async {
     final cred =
         PhoneAuthProvider.credential(verificationId: verifyId, smsCode: otp);

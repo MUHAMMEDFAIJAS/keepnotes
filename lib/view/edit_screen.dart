@@ -58,7 +58,7 @@ class EditPage extends StatelessWidget {
   }
 
   updateData(context) async {
-    final provider = Provider.of<KeepNotesController>(context, listen: false);
+    final provider = Provider.of<notesController>(context, listen: false);
     final uId = FirebaseAuth.instance.currentUser?.uid;
     ModelKeepNotes data = ModelKeepNotes(
         description: descrpCtrl.text, title: titleCtrl.text, uId: uId);
