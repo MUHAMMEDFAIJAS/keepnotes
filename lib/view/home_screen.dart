@@ -65,6 +65,7 @@ class HomeScreen extends StatelessWidget {
               return const Center(
                 child: Text('No notes available.'),
               );
+              
             }
             return ListView.builder(
               itemCount: notesData.length,
