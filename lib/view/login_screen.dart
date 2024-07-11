@@ -73,6 +73,8 @@ class LoginScreen extends StatelessWidget {
                       height: 50,
                       margin: const EdgeInsets.only(left: 10.0),
                       child: const Image(
+
+                        
                         image: NetworkImage(
                             "https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png"),
                       ),
