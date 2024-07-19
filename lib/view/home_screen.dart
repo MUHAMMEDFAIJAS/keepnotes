@@ -61,6 +61,7 @@ class HomeScreen extends StatelessWidget {
           } else if (snapshot.hasData) {
             List<QueryDocumentSnapshot<ModelKeepNotes>> notesData =
                 snapshot.data?.docs ?? [];
+                
             if (notesData.isEmpty) {
               return const Center(
                 child: Text('No notes available.'),
